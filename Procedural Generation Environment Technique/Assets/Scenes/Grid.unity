@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3ca90b2fff14614681e7113440b626e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  terrianMaterial: {fileID: 2100000, guid: 0a9a423fffafeb14cbd5d77f08bdba3a, type: 2}
+  edgeMaterial: {fileID: 2100000, guid: ae66980d44571ed4f97534f8524c1077, type: 2}
   waterLevel: 0.4
   scale: 0.1
   size: 100
@@ -163,7 +165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104548600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.1534953, y: -2.6631827, z: -10.449818}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -246,13 +248,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019639614}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 21.05, z: -10}
+  m_LocalRotation: {x: 0.2573321, y: 0.3234494, z: -0.097245336, w: 0.90537506}
+  m_LocalPosition: {x: 1.88, y: 40.207, z: -8.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 31.929, y: 39.133, z: -0.649}
 --- !u!114 &1019639618
 MonoBehaviour:
   m_ObjectHideFlags: 0
