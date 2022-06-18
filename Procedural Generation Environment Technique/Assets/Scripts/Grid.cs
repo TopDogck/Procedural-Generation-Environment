@@ -10,6 +10,7 @@ public class Grid : MonoBehaviour
 
     private void Start()
     {
+        //Random and Perlin Noise
         float[,] noiseMap = new float[size, size];
         float xOffset = Random.Range(-10000f, 10000f);
         float yOffset = Random.Range(-10000f, 10000f);
@@ -22,6 +23,7 @@ public class Grid : MonoBehaviour
             }
         }
 
+        //Fall off map
         float[,] falloffMap = new float[size, size];
         for (int y = 0; y < size; y++)
         {
@@ -34,6 +36,8 @@ public class Grid : MonoBehaviour
 
             }
         }
+
+        //End grid
         grid = new Cell[size, size];
         for (int y = 0; y < size; y++)
         {
@@ -48,6 +52,7 @@ public class Grid : MonoBehaviour
         }
     }
 
+    //create cubes on load
     private void OnDrawGizmos()
     {
         if (!Application.isPlaying) return;
