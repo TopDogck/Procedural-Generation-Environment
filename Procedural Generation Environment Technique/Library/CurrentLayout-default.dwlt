@@ -1102,13 +1102,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Work\Uni\Masters\CTD\Procedural-Generation-Environment\Procedural
     Generation Environment Technique
@@ -1116,9 +1116,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ec490000
-    m_LastClickedID: 18924
-    m_ExpandedIDs: 00000000be490000c0490000c249000000ca9a3b
+    m_SelectedIDs: f8490000
+    m_LastClickedID: 18936
+    m_ExpandedIDs: 00000000c6490000c8490000ca49000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1146,7 +1146,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000be490000c0490000c2490000
+    m_ExpandedIDs: 00000000c6490000c8490000ca490000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1267,9 +1267,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: a24f0000
-      m_LastClickedID: 20386
-      m_ExpandedIDs: 54b2ffff24b9ffff06f8ffff6efbffff
+      m_SelectedIDs: b84b0000
+      m_LastClickedID: 19384
+      m_ExpandedIDs: aaf9ffff6efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
