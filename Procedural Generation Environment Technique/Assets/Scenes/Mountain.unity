@@ -215,19 +215,19 @@ MonoBehaviour:
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0.63529414, b: 1, a: 1}
-    key1: {r: 0.09019608, g: 0.37254903, b: 0.18431373, a: 1}
-    key2: {r: 0.13461196, g: 0.5188679, b: 0.2585655, a: 0}
-    key3: {r: 0.4528302, g: 0.2815111, b: 0.23709506, a: 0}
-    key4: {r: 0.22745098, g: 0.22745098, b: 0.22745098, a: 0}
-    key5: {r: 1, g: 1, b: 1, a: 0}
+    key1: {r: 0.032377005, g: 0.54097855, b: 0.7071993, a: 1}
+    key2: {r: 0.09019608, g: 0.37254903, b: 0.18431373, a: 0}
+    key3: {r: 0.13461196, g: 0.5188679, b: 0.2585655, a: 0}
+    key4: {r: 0.4528302, g: 0.2815111, b: 0.23709506, a: 0}
+    key5: {r: 0.22745098, g: 0.22745098, b: 0.22745098, a: 0}
     key6: {r: 1, g: 1, b: 1, a: 0}
     key7: {r: 1, g: 1, b: 1, a: 0}
     ctime0: 0
-    ctime1: 15035
-    ctime2: 35852
-    ctime3: 38165
-    ctime4: 47031
-    ctime5: 65535
+    ctime1: 13107
+    ctime2: 18890
+    ctime3: 35852
+    ctime4: 38165
+    ctime5: 47031
     ctime6: 65535
     ctime7: 65535
     atime0: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_NumColorKeys: 6
+    m_NumColorKeys: 7
     m_NumAlphaKeys: 2
 --- !u!4 &486935631
 Transform:
