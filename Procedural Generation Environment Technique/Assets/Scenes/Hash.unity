@@ -152,6 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1366bcf9985e91e4aa089c36218e5ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instanceMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  material: {fileID: 2100000, guid: 3a4885fbd29064bcc8064e9911a22390, type: 2}
+  resolution: 16
 --- !u!4 &444008554
 Transform:
   m_ObjectHideFlags: 0

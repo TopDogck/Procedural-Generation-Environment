@@ -15,11 +15,15 @@
     },
     {
       "FullName": "Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2022-07-19T12:24:26.2958725Z"
+      "LastWriteTime": "2022-07-19T19:07:34.618307Z"
     },
     {
       "FullName": "mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
       "LastWriteTime": "2022-01-05T23:31:10Z"
+    },
+    {
+      "FullName": "Unity.Mathematics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "LastWriteTime": "2022-07-19T12:20:48.8761799Z"
     }
   ],
   "Functions": [
@@ -46,13 +50,14 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobForExtensions/ForJobStruct`1<HashVisualisation/HashJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 895788311580757587,
-      "ModuleHash": "d5ad906f7f9f1f0a01d56f62e03a80c7",
+      "ModuleHash": "25ea236ffb1fd893aae52455229e726a",
       "LinkName": "0CFEB37B2685183B",
       "AssemblyDependencyIndices": [
         2,
         3,
         4,
-        1
+        1,
+        5
       ]
     }
   ]
