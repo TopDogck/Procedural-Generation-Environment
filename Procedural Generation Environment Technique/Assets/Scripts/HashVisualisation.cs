@@ -7,10 +7,9 @@ using Unity.Mathematics;
 using UnityEngine;
 
 using static Unity.Mathematics.math;
-//2.2
+
 public class HashVisualisation : MonoBehaviour
 {
-	//Hash job
 	[BurstCompile(FloatPrecision.Standard, FloatMode.Fast, CompileSynchronously = true)]
 	struct HashJob : IJobFor
 	{
@@ -22,20 +21,21 @@ public class HashVisualisation : MonoBehaviour
 
 		public float invResolution;
 
+		public XXHash hash;
+
 		public void Execute(int i)
 		{
-			float v = floor(invResolution * i + 0.00001f);
-			float u = i - resolution * v;
+			int v = (int)floor(invResolution * i + 0.00001f);
+			int u = i - resolution * v - resolution / 2;
+			v -= resolution / 2;
 
-			var hash = new XXHash(0);
-			hashes[i] = hash;
+			hashes[i] = hash.Eat(u).Eat(v);
 		}
 	}
 
-	//Initialization and Rendering
 	static int
-	hashesId = Shader.PropertyToID("_Hashes"),
-	configId = Shader.PropertyToID("_Config");
+		hashesId = Shader.PropertyToID("_Hashes"),
+		configId = Shader.PropertyToID("_Config");
 
 	[SerializeField]
 	Mesh instanceMesh;
@@ -46,13 +46,18 @@ public class HashVisualisation : MonoBehaviour
 	[SerializeField, Range(1, 512)]
 	int resolution = 16;
 
+	[SerializeField, Range(-2f, 2f)]
+	float verticalOffset = 1f;
+
+	[SerializeField]
+	int seed;
+
 	NativeArray<uint> hashes;
 
 	ComputeBuffer hashesBuffer;
 
 	MaterialPropertyBlock propertyBlock;
 
-	//run job here and configure the property block
 	void OnEnable()
 	{
 		int length = resolution * resolution;
@@ -63,17 +68,19 @@ public class HashVisualisation : MonoBehaviour
 		{
 			hashes = hashes,
 			resolution = resolution,
-			invResolution = 1f / resolution
+			invResolution = 1f / resolution,
+			hash = XXHash.Seed(seed)
 		}.ScheduleParallel(hashes.Length, resolution, default).Complete();
 
 		hashesBuffer.SetData(hashes);
 
 		propertyBlock ??= new MaterialPropertyBlock();
 		propertyBlock.SetBuffer(hashesId, hashesBuffer);
-		propertyBlock.SetVector(configId, new Vector4(resolution, 1f / resolution));
+		propertyBlock.SetVector(configId, new Vector4(
+			resolution, 1f / resolution, verticalOffset / resolution
+		));
 	}
 
-	//refresh the grid
 	void OnDisable()
 	{
 		hashes.Dispose();
@@ -89,6 +96,7 @@ public class HashVisualisation : MonoBehaviour
 			OnEnable();
 		}
 	}
+
 	void Update()
 	{
 		Graphics.DrawMeshInstancedProcedural(
