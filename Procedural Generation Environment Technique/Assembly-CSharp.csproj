@@ -64,7 +64,9 @@
     <Compile Include="Assets\Scripts\World.cs" />
     <Compile Include="Assets\Scripts\Cell.cs" />
     <Compile Include="Assets\Scripts\Grid.cs" />
-    <Compile Include="Assets\Scripts\XXHash.cs" />
+    <Compile Include="Assets\Scripts\SpaceTRS.cs" />
+    <Compile Include="Assets\Scripts\SmallXXHash.cs" />
+    <Compile Include="Assets\Scripts\Shapes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\HashGPU.hlsl" />
