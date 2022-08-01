@@ -56,17 +56,19 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Shapes.cs" />
+    <Compile Include="Assets\Scripts\SpaceTRS.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\MeshGeneration.cs" />
     <Compile Include="Assets\Scripts\TerrainGenerator.cs" />
     <Compile Include="Assets\Scripts\HashVisualisation.cs" />
     <Compile Include="Assets\URP\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\SmallXXHash.cs" />
     <Compile Include="Assets\Scripts\World.cs" />
     <Compile Include="Assets\Scripts\Cell.cs" />
     <Compile Include="Assets\Scripts\Grid.cs" />
-    <Compile Include="Assets\Scripts\SpaceTRS.cs" />
-    <Compile Include="Assets\Scripts\SmallXXHash.cs" />
-    <Compile Include="Assets\Scripts\Shapes.cs" />
+    <Compile Include="Assets\Scripts\Rule.cs" />
+    <Compile Include="Assets\Scripts\LsystemGeneration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\HashGPU.hlsl" />
