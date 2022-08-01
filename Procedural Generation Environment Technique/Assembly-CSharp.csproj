@@ -63,12 +63,14 @@
     <Compile Include="Assets\Scripts\TerrainGenerator.cs" />
     <Compile Include="Assets\Scripts\HashVisualisation.cs" />
     <Compile Include="Assets\URP\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\Rule.cs" />
     <Compile Include="Assets\Scripts\SmallXXHash.cs" />
     <Compile Include="Assets\Scripts\World.cs" />
     <Compile Include="Assets\Scripts\Cell.cs" />
     <Compile Include="Assets\Scripts\Grid.cs" />
-    <Compile Include="Assets\Scripts\Rule.cs" />
     <Compile Include="Assets\Scripts\LsystemGeneration.cs" />
+    <Compile Include="Assets\Scripts\AgentParameters.cs" />
+    <Compile Include="Assets\Scripts\BasicVisualiser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\HashGPU.hlsl" />
