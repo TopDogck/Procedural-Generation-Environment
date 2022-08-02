@@ -15,3 +15,4 @@ MonoBehaviour:
   letter: F
   results:
   - '[+F][-F]'
+  randomResults: 0

@@ -11,6 +11,10 @@ public class LsystemGeneration : MonoBehaviour
     [Range(0,10)]
     public int limt = 1; //iteration limt
 
+    public bool randomRuleIgnore = true; //random rule ignore modifer
+    [Range(0, 1)]
+    public float changeIgnoreRule = 0.3f; 
+
     private void Start()
     {
         Debug.Log(GenerateAxiom());   
@@ -49,6 +53,13 @@ public class LsystemGeneration : MonoBehaviour
         {
             if (rule.letter == c.ToString())
             {
+                if (randomRuleIgnore && currentIndex > 1)
+                {
+                    if (UnityEngine.Random.value < changeIgnoreRule)
+                    {
+                        return;
+                    }
+                }
                 newWord.Append(GrownRecursive(rule.GetResults(),currentIndex + 1));
             }
         }

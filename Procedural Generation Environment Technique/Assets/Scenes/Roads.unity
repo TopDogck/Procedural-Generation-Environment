@@ -284,9 +284,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rules:
-  - {fileID: 11400000, guid: c045b3c899f7b3d4290bfe9edbdb9890, type: 2}
+  - {fileID: 11400000, guid: 11a5bf3202e877440a3b88b83e1dfff7, type: 2}
   axiom: '[F]--F'
-  limt: 2
+  limt: 3
+  randomRuleIgnore: 1
+  changeIgnoreRule: 0.3
 --- !u!1 &1141249242
 GameObject:
   m_ObjectHideFlags: 0
