@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Hash\SpaceTRS.cs" />
     <Compile Include="Assets\Scripts\Road\AgentParameters.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\Road\RoadPlacement.cs" />
     <Compile Include="Assets\Scripts\Mesh\MeshGeneration.cs" />
     <Compile Include="Assets\Scripts\Mesh\TerrainGenerator.cs" />
     <Compile Include="Assets\Scripts\Road\BasicVisualiser.cs" />
@@ -70,11 +71,11 @@
     <Compile Include="Assets\Scripts\Mesh\World.cs" />
     <Compile Include="Assets\Scripts\Grid\Cell.cs" />
     <Compile Include="Assets\Scripts\Grid\Grid.cs" />
+    <Compile Include="Assets\Scripts\Road\RoadDirections.cs" />
     <Compile Include="Assets\Scripts\Road\LsystemGeneration.cs" />
     <Compile Include="Assets\Scripts\Road\NewVisualiser.cs" />
     <Compile Include="Assets\Scripts\Road\Roads.cs" />
-    <Compile Include="Assets\Scripts\Road\RoadDirections.cs" />
-    <Compile Include="Assets\Scripts\Road\RoadPlacement.cs" />
+    <Compile Include="Assets\Scripts\World\PlanetCameraController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\HashGPU.hlsl" />
