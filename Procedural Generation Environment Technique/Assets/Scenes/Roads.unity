@@ -270,8 +270,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lsystem: {fileID: 1047810579}
+  lineMaterial: {fileID: 2100000, guid: b4fdf45391e304f4a912922b92f6aea7, type: 2}
   customLength: 2
   roads: {fileID: 1590900471}
+  drawLine: 0
 --- !u!4 &940040678
 Transform:
   m_ObjectHideFlags: 0
@@ -553,11 +555,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e761dbf31e4f0074ba0a9c2fffe542c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roadForward: {fileID: 969467529679235479, guid: ad055bd5781c64549b41cb09fd27630e, type: 3}
-  roadT: {fileID: 0}
-  road3: {fileID: 0}
-  road4: {fileID: 0}
-  roadEnd: {fileID: 0}
+  roadForward: {fileID: 5644720262445048366, guid: ad055bd5781c64549b41cb09fd27630e, type: 3}
+  roadTurn: {fileID: 8661548433732365550, guid: fa474f797777e7c4caa408b1823ea449, type: 3}
+  roadTri: {fileID: 3598022743198626205, guid: b1c2bef9477c0ee4eb44e949143f46ff, type: 3}
+  roadCross: {fileID: 7370715298169567163, guid: 0b27a6c3524b5d8499b6ecaf0c19f727, type: 3}
+  roadEnd: {fileID: 7037100357158876339, guid: 302b74156d7aa584cbe4350d5437dd59, type: 3}
 --- !u!4 &1590900472
 Transform:
   m_ObjectHideFlags: 0

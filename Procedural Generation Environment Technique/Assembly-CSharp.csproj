@@ -73,6 +73,8 @@
     <Compile Include="Assets\Scripts\Road\LsystemGeneration.cs" />
     <Compile Include="Assets\Scripts\Road\NewVisualiser.cs" />
     <Compile Include="Assets\Scripts\Road\Roads.cs" />
+    <Compile Include="Assets\Scripts\Road\RoadDirections.cs" />
+    <Compile Include="Assets\Scripts\Road\RoadPlacement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\HashGPU.hlsl" />

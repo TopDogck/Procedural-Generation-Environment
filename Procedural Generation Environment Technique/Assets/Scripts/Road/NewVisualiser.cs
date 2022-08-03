@@ -8,9 +8,10 @@ public class NewVisualiser : MonoBehaviour
     public LsystemGeneration lsystem;
     List<Vector3> positions = new List<Vector3>();
     //public GameObject prefab; //for testing
-    //public Material lineMaterial; // for testing
+    public Material lineMaterial; // for testing
     public int customLength = 2;
     public Roads roads;
+    public bool drawLine = false;
 
     private int length = 8;
     private float angle = 90;
@@ -77,7 +78,10 @@ public class NewVisualiser : MonoBehaviour
                     tempPostion = currentPosition;
                     currentPosition += direction * Length;
                     roads.PlaceStreetPos(tempPostion, Vector3Int.RoundToInt(direction), length);
-                    //DrawLine(tempPostion, currentPosition, Color.white); //for testing
+                    if (drawLine == true)
+                    {
+                        DrawLine(tempPostion, currentPosition, Color.white); //for testing
+                    }
                     Length -= customLength;
                     positions.Add(currentPosition);
                     break;
@@ -91,24 +95,25 @@ public class NewVisualiser : MonoBehaviour
                     break;
             }
         }
+        roads.FixRoad();
 
-        //foreach (var postion in positions)
+        //foreach (var postion in positions) // draw the orbs
         //{
         //    Instantiate(prefab, postion, Quaternion.identity);
         //}
     }
 
-    //private void DrawLine(Vector3 start, Vector3 next, Color colour) // for testing
-    //{
-    //    GameObject line = new GameObject("line");
-    //    line.transform.position = start;
-    //    var lineRenderer = line.AddComponent<LineRenderer>();
-    //    //lineRenderer.material = lineMaterial;
-    //    lineRenderer.startColor = colour;
-    //    lineRenderer.endColor = colour;
-    //    lineRenderer.startWidth = 0.2f;
-    //    lineRenderer.endWidth = 0.2f;
-    //    lineRenderer.SetPosition(0, start);
-    //    lineRenderer.SetPosition(1, next);
-    //}
+    private void DrawLine(Vector3 start, Vector3 next, Color colour) // for testing
+    {
+        GameObject line = new GameObject("line");
+        line.transform.position = start;
+        var lineRenderer = line.AddComponent<LineRenderer>();
+        lineRenderer.material = lineMaterial;
+        lineRenderer.startColor = colour;
+        lineRenderer.endColor = colour;
+        lineRenderer.startWidth = 0.2f;
+        lineRenderer.endWidth = 0.2f;
+        lineRenderer.SetPosition(0, start);
+        lineRenderer.SetPosition(1, next);
+    }
 }
