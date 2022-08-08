@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Roads : MonoBehaviour
@@ -7,6 +8,12 @@ public class Roads : MonoBehaviour
     public GameObject roadForward, roadTurn, roadTri, roadCross, roadEnd;
     Dictionary<Vector3Int, GameObject> roadDic = new Dictionary<Vector3Int, GameObject>();
     HashSet<Vector3Int> fixRoads = new HashSet<Vector3Int>();
+
+    public List<Vector3Int> GetRoadPos()
+    {
+        return roadDic.Keys.ToList();
+    }
+
 
     public void PlaceStreetPos(Vector3 startPos, Vector3Int direction, int length)
     {

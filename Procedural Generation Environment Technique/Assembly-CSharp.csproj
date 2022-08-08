@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Hash\HashVisualisation.cs" />
     <Compile Include="Assets\URP\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Road\Rule.cs" />
+    <Compile Include="Assets\Scripts\World\PlanetCameraController.cs" />
     <Compile Include="Assets\Scripts\Hash\SmallXXHash.cs" />
     <Compile Include="Assets\Scripts\Mesh\World.cs" />
     <Compile Include="Assets\Scripts\Grid\Cell.cs" />
@@ -75,7 +76,7 @@
     <Compile Include="Assets\Scripts\Road\LsystemGeneration.cs" />
     <Compile Include="Assets\Scripts\Road\NewVisualiser.cs" />
     <Compile Include="Assets\Scripts\Road\Roads.cs" />
-    <Compile Include="Assets\Scripts\World\PlanetCameraController.cs" />
+    <Compile Include="Assets\Scripts\Road\HouseHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\HashGPU.hlsl" />

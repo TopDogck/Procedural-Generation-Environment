@@ -13,6 +13,8 @@ public class NewVisualiser : MonoBehaviour
     public Roads roads;
     public bool drawLine = false;
 
+    public HouseHelper houseHelper;
+
     private int length = 8;
     private float angle = 90;
 
@@ -96,7 +98,7 @@ public class NewVisualiser : MonoBehaviour
             }
         }
         roads.FixRoad();
-
+        houseHelper.PlaceHousesAroundRoad(roads.GetRoadPos());
         //foreach (var postion in positions) // draw the orbs
         //{
         //    Instantiate(prefab, postion, Quaternion.identity);

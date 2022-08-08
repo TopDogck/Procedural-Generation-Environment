@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,5 +25,23 @@ public static class RoadPlacement
             nextDirections.Add(RoadDirections.Down); ;
         }
         return nextDirections;
+    }
+
+    internal static Vector3Int GetOffsetFromDirections(RoadDirections directions)
+    {
+        switch (directions)
+        {
+            case RoadDirections.Up:
+                return new Vector3Int(0, 0, 1);
+            case RoadDirections.Down:
+                return new Vector3Int(0, 0, -1);
+            case RoadDirections.Left:
+                return Vector3Int.left;
+            case RoadDirections.Right:
+                return Vector3Int.right;
+            default:
+                break;
+        }
+        throw new System.Exception("No directions in" + directions); //error helper
     }
 }
