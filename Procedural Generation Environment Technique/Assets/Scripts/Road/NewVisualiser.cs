@@ -80,12 +80,12 @@ public class NewVisualiser : MonoBehaviour
                     tempPostion = currentPosition;
                     currentPosition += direction * Length;
                     roads.PlaceStreetPos(tempPostion, Vector3Int.RoundToInt(direction), length);
+                    Length -= customLength;
+                    positions.Add(currentPosition);
                     if (drawLine == true)
                     {
                         DrawLine(tempPostion, currentPosition, Color.white); //for testing
                     }
-                    Length -= customLength;
-                    positions.Add(currentPosition);
                     break;
                 case Letters.turnRight:
                     direction = Quaternion.AngleAxis(angle, Vector3.up) * direction; //z postion
@@ -99,10 +99,6 @@ public class NewVisualiser : MonoBehaviour
         }
         roads.FixRoad();
         houseHelper.PlaceHousesAroundRoad(roads.GetRoadPos());
-        //foreach (var postion in positions) // draw the orbs
-        //{
-        //    Instantiate(prefab, postion, Quaternion.identity);
-        //}
     }
 
     private void DrawLine(Vector3 start, Vector3 next, Color colour) // for testing

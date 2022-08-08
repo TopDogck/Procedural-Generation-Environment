@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Roads : MonoBehaviour
 {
-    public GameObject roadForward, roadTurn, roadTri, roadCross, roadEnd;
+    public GameObject roadForward, roadTurn, roadTri, roadCross, roadEnd, roadTest;
     Dictionary<Vector3Int, GameObject> roadDic = new Dictionary<Vector3Int, GameObject>();
     HashSet<Vector3Int> fixRoads = new HashSet<Vector3Int>();
 
@@ -87,8 +87,8 @@ public class Roads : MonoBehaviour
             else if (nextDirections.Count == 3) // 3 way road
             {
                 Destroy(roadDic[postion]);
-                if (nextDirections.Contains(RoadDirections.Right) 
-                    && (nextDirections.Contains(RoadDirections.Down)) 
+                if (nextDirections.Contains(RoadDirections.Right)
+                    && (nextDirections.Contains(RoadDirections.Down))
                     && (nextDirections.Contains(RoadDirections.Left)))
                 {
                     roation = Quaternion.Euler(0, 90, 0);
@@ -111,6 +111,7 @@ public class Roads : MonoBehaviour
             {
                 Destroy(roadDic[postion]);
                 roadDic[postion] = Instantiate(roadCross, postion, roation, transform);
+                Debug.Log("Count" + nextDirections.Count);
             }
         }
     }

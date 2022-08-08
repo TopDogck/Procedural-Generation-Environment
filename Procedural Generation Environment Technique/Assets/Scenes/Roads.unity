@@ -335,7 +335,7 @@ MonoBehaviour:
   rules:
   - {fileID: 11400000, guid: 11a5bf3202e877440a3b88b83e1dfff7, type: 2}
   axiom: '[F]--F'
-  limt: 3
+  limt: 2
   randomRuleIgnore: 1
   changeIgnoreRule: 0.3
 --- !u!1 &1141249242
@@ -561,6 +561,7 @@ MonoBehaviour:
   roadTri: {fileID: 3598022743198626205, guid: b1c2bef9477c0ee4eb44e949143f46ff, type: 3}
   roadCross: {fileID: 7370715298169567163, guid: 0b27a6c3524b5d8499b6ecaf0c19f727, type: 3}
   roadEnd: {fileID: 7037100357158876339, guid: 302b74156d7aa584cbe4350d5437dd59, type: 3}
+  roadTest: {fileID: 7370715298169567163, guid: bc9003e05f2fe834b9ebaf8713bc2acd, type: 3}
 --- !u!4 &1590900472
 Transform:
   m_ObjectHideFlags: 0
