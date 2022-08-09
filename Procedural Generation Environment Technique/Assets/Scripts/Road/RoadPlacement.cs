@@ -44,4 +44,22 @@ public static class RoadPlacement
         }
         throw new System.Exception("No directions in" + directions); //error helper
     }
+
+    public static RoadDirections GetReverseDirection(RoadDirections directions)
+    {
+        switch (directions)
+        {
+            case RoadDirections.Up:
+                return RoadDirections.Down;
+            case RoadDirections.Down:
+                return RoadDirections.Up;
+            case RoadDirections.Left:
+                return RoadDirections.Right;
+            case RoadDirections.Right:
+                return RoadDirections.Left;
+            default:
+                break;
+        }
+        throw new System.Exception("No reverse directions in" + directions); //error helper
+    }
 }

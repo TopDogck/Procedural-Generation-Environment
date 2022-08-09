@@ -11,9 +11,27 @@ public class HouseHelper : MonoBehaviour
     public void PlaceHousesAroundRoad(List<Vector3Int> roadPos)
     {
         Dictionary<Vector3Int, RoadDirections> freeSpace = FindFreeSpaces(roadPos);
-        foreach (var postion in freeSpace.Keys)
+        foreach (var freeSpot in freeSpace)
         {
-            Instantiate(prefab, postion, Quaternion.identity, transform);
+            var roation = Quaternion.identity;
+            switch (freeSpot.Value)
+            {
+                case RoadDirections.Up:
+                    roation = Quaternion.Euler(0, 90, 0);
+                    break;
+                case RoadDirections.Down:
+                    roation = Quaternion.Euler(0, -90, 0);
+                    break;
+                //case RoadDirections.Left:
+                //    roation = Quaternion.Euler(0, 0, 0);
+                //    break;
+                case RoadDirections.Right:
+                    roation = Quaternion.Euler(0, 180, 0);
+                    break;
+                default:
+                    break;
+            }
+            Instantiate(prefab, freeSpot.Key, roation, transform);
         }
     }
 
@@ -32,7 +50,7 @@ public class HouseHelper : MonoBehaviour
                     {
                         continue;
                     }
-                    freeSpaces.Add(newPos, RoadDirections.Right);
+                    freeSpaces.Add(newPos, RoadPlacement.GetReverseDirection(directions));
                 }
             }
         }
