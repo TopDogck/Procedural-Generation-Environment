@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Hash\Shapes.cs" />
     <Compile Include="Assets\Scripts\Hash\SpaceTRS.cs" />
+    <Compile Include="Assets\Scripts\Road\HouseHelper.cs" />
     <Compile Include="Assets\Scripts\Road\AgentParameters.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\Road\RoadPlacement.cs" />
@@ -76,7 +77,9 @@
     <Compile Include="Assets\Scripts\Road\LsystemGeneration.cs" />
     <Compile Include="Assets\Scripts\Road\NewVisualiser.cs" />
     <Compile Include="Assets\Scripts\Road\Roads.cs" />
-    <Compile Include="Assets\Scripts\Road\HouseHelper.cs" />
+    <Compile Include="Assets\Scripts\World\Fibionacci\FibonacciSphere.cs" />
+    <Compile Include="Assets\Scripts\World\Fibionacci\BaseFibonacci.cs" />
+    <Compile Include="Assets\Scripts\World\Fibionacci\VoronoiFibionacci.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\HashGPU.hlsl" />
@@ -738,6 +741,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{8245A03C-E7B4-2594-B95D-90BA5B19F2AF}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
