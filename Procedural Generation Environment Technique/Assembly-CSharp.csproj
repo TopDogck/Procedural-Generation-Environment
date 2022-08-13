@@ -60,12 +60,15 @@
     <Compile Include="Assets\Scripts\Hash\SpaceTRS.cs" />
     <Compile Include="Assets\Scripts\Road\HouseHelper.cs" />
     <Compile Include="Assets\Scripts\Road\AgentParameters.cs" />
+    <Compile Include="Assets\Scripts\World\Fibonacci\VoronoiFibonacci.cs" />
+    <Compile Include="Assets\Scripts\World\Fibonacci\FibonacciSphere.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\Road\RoadPlacement.cs" />
     <Compile Include="Assets\Scripts\Mesh\MeshGeneration.cs" />
     <Compile Include="Assets\Scripts\Mesh\TerrainGenerator.cs" />
     <Compile Include="Assets\Scripts\Road\BasicVisualiser.cs" />
     <Compile Include="Assets\Scripts\Hash\HashVisualisation.cs" />
+    <Compile Include="Assets\Scripts\World\Fibonacci\BaseFibonacci.cs" />
     <Compile Include="Assets\URP\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Road\Rule.cs" />
     <Compile Include="Assets\Scripts\World\PlanetCameraController.cs" />
@@ -77,9 +80,6 @@
     <Compile Include="Assets\Scripts\Road\LsystemGeneration.cs" />
     <Compile Include="Assets\Scripts\Road\NewVisualiser.cs" />
     <Compile Include="Assets\Scripts\Road\Roads.cs" />
-    <Compile Include="Assets\Scripts\World\Fibionacci\FibonacciSphere.cs" />
-    <Compile Include="Assets\Scripts\World\Fibionacci\BaseFibonacci.cs" />
-    <Compile Include="Assets\Scripts\World\Fibionacci\VoronoiFibionacci.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\HashGPU.hlsl" />

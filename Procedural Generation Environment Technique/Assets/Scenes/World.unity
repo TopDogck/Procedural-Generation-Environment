@@ -322,12 +322,12 @@ GameObject:
   - component: {fileID: 881547036}
   - component: {fileID: 881547035}
   m_Layer: 0
-  m_Name: Fibionacci Voronoi Sphere
+  m_Name: Fibonacci Voronoi Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &881547035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 1732443981}
   - component: {fileID: 1732443982}
   m_Layer: 0
-  m_Name: Fibionacci Sphere
+  m_Name: Fibonacci Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
