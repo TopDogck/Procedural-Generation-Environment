@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MIConvexHull;
+using Habrador_Computational_Geometry;
 
 public class ConvexHullBase : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class ConvexHullBase : MonoBehaviour
     public float jitter = 0f;
 
     private ConvexHull<DefaultVertex, DefaultConvexFace<DefaultVertex>> convexhull;
+    private HalfEdgeData3 convexHull;
+    private HashSet<MyVector3> Hpoints;
 
     //FibonacciSphere points with Convex Hull start 
     void OnValidate()
@@ -24,6 +27,19 @@ public class ConvexHullBase : MonoBehaviour
         List<double[]> converted = ConvertPoints(points);
 
         convexhull = GenerateConvexHull(converted);
+    }
+
+    //Mesh render and Mesh filter
+    public void Update()
+    {
+        OnValidate();
+        Hpoints = FibonacciSphere.GeneratePointSet(numPoints, radius, jitter);
+        convexHull = IterativeHullAlgorithm3D.GenerateConvexHull(Hpoints, true);
+
+        Mesh mesh = convexHull.ConvertToMyMesh("Planet", MyMesh.MeshStyle.HardAndSoftEdges).ConvertToUnityMesh(true, "Planet");
+
+        MeshFilter meshFilter = GetComponent<MeshFilter>();
+        meshFilter.mesh = mesh;
     }
 
     //Convex Hull
@@ -71,7 +87,7 @@ public class ConvexHullBase : MonoBehaviour
     void DrawConvexHull() // Draw all the points.
     {
         //Point colour
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.gray;
         foreach (DefaultVertex point in convexhull.Points)
         {
             Vector3 convertedPoint = ToVector3(point);

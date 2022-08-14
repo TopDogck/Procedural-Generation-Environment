@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -150,7 +150,7 @@ MonoBehaviour:
     y: 0
     width: 2560
     height: 1357
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -275,11 +275,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 17}
   - {fileID: 13}
+  - {fileID: 17}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -594,23 +594,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/World/Voronoi
+    - Assets/Scripts/World/Convex Hull
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/World/Voronoi
+  - Assets/Scripts/World/Convex Hull
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Work\Uni\Masters\CTD\Procedural-Generation-Environment\Procedural
     Generation Environment Technique
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 784f0000
-    m_LastClickedID: 20344
-    m_ExpandedIDs: 00000000c84b0000ca4b0000cc4b0000da4b0000e24b000000ca9a3b
+    scrollPos: {x: 0, y: 125}
+    m_SelectedIDs: ec4b0000
+    m_LastClickedID: 19436
+    m_ExpandedIDs: 00000000c84b0000ca4b0000cc4b0000d24b0000da4b0000e24b0000424c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300007a4d000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -759,8 +759,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6af8ffff
-      m_LastClickedID: -1942
+      m_SelectedIDs: 6a4b0000
+      m_LastClickedID: 19306
       m_ExpandedIDs: 6efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -821,9 +821,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.2642016, y: -1.6928854, z: 11.097102}
+    m_Target: {x: -5.5816207, y: -3.0605962, z: 11.292601}
     speed: 2
-    m_Value: {x: -5.2642016, y: -1.6928854, z: 11.097102}
+    m_Value: {x: -5.5816207, y: -3.0605962, z: 11.292601}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -870,13 +870,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.06379668, y: -0.2164843, z: 0.0141762495, w: 0.97414434}
+    m_Target: {x: 0.1158808, y: -0.22991806, z: 0.027582897, w: 0.9659411}
     speed: 2
-    m_Value: {x: 0.0637937, y: -0.21647418, z: 0.014175587, w: 0.9740988}
+    m_Value: {x: 0.11587537, y: -0.22990729, z: 0.027581604, w: 0.96589583}
   m_Size:
-    m_Target: 9.014399
+    m_Target: 9.400971
     speed: 2
-    m_Value: 9.014399
+    m_Value: 9.400971
   m_Ortho:
     m_Target: 0
     speed: 2
