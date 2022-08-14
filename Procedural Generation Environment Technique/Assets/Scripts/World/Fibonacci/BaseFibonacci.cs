@@ -8,18 +8,19 @@ public class BaseFibonacci : MonoBehaviour
     public float radius;
     private Vector3[] points;
 
+    //FibonacciSphere points start
     private void OnValidate()
     {
         points = FibonacciSphere.GeneratePoints(amount, radius);
     }
 
+    //Draw
     private void OnDrawGizmos()
     {
         for (int i = 0; i < points.Length; i++)
         {
             // Set Colour.
-            //float hue = (i + 1f) / points.Length;
-            Color colour = Color.white;//HSVToRGB(0, 1f, 1f);
+            Color colour = Color.white;
             Gizmos.color = colour;
 
             // Draw sphere at the position of this point relative to the transform position.
