@@ -80,6 +80,8 @@
     <Compile Include="Assets\Scripts\Road\LsystemGeneration.cs" />
     <Compile Include="Assets\Scripts\Road\NewVisualiser.cs" />
     <Compile Include="Assets\Scripts\Road\Roads.cs" />
+    <Compile Include="Assets\Scripts\World\Voronoi\ConvexVoronoiSphere.cs" />
+    <Compile Include="Assets\Scripts\World\Convex Hull\ConvexHullVector3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\HashGPU.hlsl" />
