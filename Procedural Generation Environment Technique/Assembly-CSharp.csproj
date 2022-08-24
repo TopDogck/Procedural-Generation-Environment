@@ -59,12 +59,14 @@
     <Compile Include="Assets\Scripts\Hash\Shapes.cs" />
     <Compile Include="Assets\Scripts\Hash\SpaceTRS.cs" />
     <Compile Include="Assets\Scripts\Road\HouseHelper.cs" />
+    <Compile Include="Assets\Scripts\World\Voronoi\ConvexVoronoiSphere.cs" />
     <Compile Include="Assets\Scripts\Road\AgentParameters.cs" />
     <Compile Include="Assets\Scripts\World\Fibonacci\FibonacciSphere.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\Road\RoadPlacement.cs" />
     <Compile Include="Assets\Scripts\Mesh\MeshGeneration.cs" />
     <Compile Include="Assets\Scripts\Mesh\TerrainGenerator.cs" />
+    <Compile Include="Assets\Scripts\World\Convex Hull\ConvexHullVector3.cs" />
     <Compile Include="Assets\Scripts\Road\BasicVisualiser.cs" />
     <Compile Include="Assets\Scripts\Hash\HashVisualisation.cs" />
     <Compile Include="Assets\Scripts\World\Convex Hull\ConvexHullBase.cs" />
@@ -80,8 +82,9 @@
     <Compile Include="Assets\Scripts\Road\LsystemGeneration.cs" />
     <Compile Include="Assets\Scripts\Road\NewVisualiser.cs" />
     <Compile Include="Assets\Scripts\Road\Roads.cs" />
-    <Compile Include="Assets\Scripts\World\Voronoi\ConvexVoronoiSphere.cs" />
-    <Compile Include="Assets\Scripts\World\Convex Hull\ConvexHullVector3.cs" />
+    <Compile Include="Assets\Scripts\World\Flat World\PlanetFlatCrust.cs" />
+    <Compile Include="Assets\Scripts\World\Flat World\FlatPlate.cs" />
+    <Compile Include="Assets\Scripts\World\Flat World\FlatCrust.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\HashGPU.hlsl" />
