@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HouseHelper : MonoBehaviour
 {
-    public GameObject prefab;
+    public HouseType[] houseTypes;
     public Dictionary<Vector3Int, GameObject> houseDic = new Dictionary<Vector3Int, GameObject>();
 
     public void PlaceHousesAroundRoad(List<Vector3Int> roadPos)
@@ -31,8 +31,37 @@ public class HouseHelper : MonoBehaviour
                 default:
                     break;
             }
-            Instantiate(prefab, freeSpot.Key, roation, transform);
+
+            for (int h = 0; h < houseTypes.Length; h++)
+            {
+                if (houseTypes[h].amount == -1)
+                {
+                    var house = SpawnHouse(houseTypes[h].GetPrefab(), freeSpot.Key, roation);
+                    houseDic.Add(freeSpot.Key, house);
+                    break;
+                }
+                if (houseTypes[h].IsHouseAllowed())
+                {
+                    if (houseTypes[h].sizeReq > 1)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        var house = SpawnHouse(houseTypes[h].GetPrefab(), freeSpot.Key, roation); //Instantiate(prefab, freeSpot.Key, roation, transform);
+
+                        houseDic.Add(freeSpot.Key, house);
+                        break;
+                    }
+                }
+            }
         }
+    }
+
+    private GameObject SpawnHouse(GameObject houseprefab, Vector3Int pos, Quaternion roation)
+    {
+        var newHouse = Instantiate(houseprefab, pos, roation, transform);
+        return newHouse;
     }
 
     private Dictionary<Vector3Int, RoadDirections> FindFreeSpaces(List<Vector3Int> roadPos) //algorith

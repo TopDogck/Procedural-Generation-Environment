@@ -651,7 +651,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408f73ce1985bd34898366852f0e84a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 703680335991234322, guid: 40739ab708d696741aaa6ff25c613648, type: 3}
+  houseTypes:
+  - prefabs:
+    - {fileID: 703680335991234322, guid: dc03338ee98e5e549ad4a8955a30c0e3, type: 3}
+    sizeReq: 1
+    amount: 34
+    amountPlaced: 0
+  - prefabs:
+    - {fileID: 703680335991234322, guid: 40739ab708d696741aaa6ff25c613648, type: 3}
+    - {fileID: 703680335991234322, guid: 7bd423611b6a5e14c87c4788c1a0b586, type: 3}
+    sizeReq: 1
+    amount: -1
+    amountPlaced: 0
 --- !u!4 &2077892359
 Transform:
   m_ObjectHideFlags: 0

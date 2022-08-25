@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Hash\Shapes.cs" />
     <Compile Include="Assets\Scripts\Hash\SpaceTRS.cs" />
+    <Compile Include="Assets\Scripts\Road\HouseHelper.cs" />
     <Compile Include="Assets\Scripts\Road\AgentParameters.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\Road\RoadPlacement.cs" />
@@ -76,7 +77,7 @@
     <Compile Include="Assets\Scripts\Road\LsystemGeneration.cs" />
     <Compile Include="Assets\Scripts\Road\NewVisualiser.cs" />
     <Compile Include="Assets\Scripts\Road\Roads.cs" />
-    <Compile Include="Assets\Scripts\Road\HouseHelper.cs" />
+    <Compile Include="Assets\Scripts\Road\HouseType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\HashGPU.hlsl" />

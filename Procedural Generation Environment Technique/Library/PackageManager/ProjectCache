@@ -6,8 +6,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637938300395631492
-    m_Hash: 133129832
+      ticks: 637970400367280916
+    m_Hash: 2354651437
   m_LockFileStatus:
     m_FilePath: D:/Work/Uni/Masters/CTD/Procedural-Generation-Environment/Procedural
       Generation Environment Technique/Packages/packages-lock.json
@@ -15,8 +15,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637938300395661422
-    m_Hash: 1417055148
+      ticks: 637970400367290871
+    m_Hash: 346782358
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -158,6 +158,7 @@ m_PackageAssets:
         - 1.7.2
         - 1.7.3
         - 1.8.0-pre.1
+        - 1.8.0-pre.2
         compatible:
         - 1.1.1
         - 1.1.2
@@ -244,6 +245,7 @@ m_PackageAssets:
         - 1.7.2
         - 1.7.3
         - 1.8.0-pre.1
+        - 1.8.0-pre.2
         verified: 1.4.11
       dependencies:
       - name: com.unity.mathematics
@@ -3638,9 +3640,11 @@ m_PackageAssets:
         - 10.8.0
         - 10.8.1
         - 10.9.0
+        - 10.10.0
         compatible:
         - 10.8.1
         - 10.9.0
+        - 10.10.0
         verified: 10.8.1
       dependencies:
       - name: com.unity.render-pipelines.core
