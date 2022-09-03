@@ -6,12 +6,13 @@ public class BaseFibonacci : MonoBehaviour
 {
     public int amount;
     public float radius;
+    public int jitter;
     private Vector3[] points;
 
     //FibonacciSphere points start
     private void OnValidate()
     {
-        points = FibonacciSphere.GeneratePoints(amount, radius);
+        points = FibonacciSphere.GeneratePoints(amount, radius, jitter);
     }
 
     //Draw
