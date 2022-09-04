@@ -20,7 +20,7 @@ public class ConvexHullBase : MonoBehaviour
     private HalfEdgeData3 convexHull;
     private HashSet<MyVector3> Hpoints;
 
-    //FibonacciSphere points with Convex Hull start 
+    //FibonacciSphere points with Convex Hull 
     void OnValidate()
     {
         Vector3[] points = FibonacciSphere.GeneratePoints(numPoints, radius, jitter);
@@ -36,13 +36,12 @@ public class ConvexHullBase : MonoBehaviour
         Hpoints = FibonacciSphere.GeneratePointSet(numPoints, radius, jitter);
         convexHull = IterativeHullAlgorithm3D.GenerateConvexHull(Hpoints, true);
 
-        Mesh mesh = convexHull.ConvertToMyMesh("Planet", MyMesh.MeshStyle.HardAndSoftEdges).ConvertToUnityMesh(true, "Planet");
-
+        Mesh mesh = convexHull.ConvertToMyMesh("Planet", MyMesh.MeshStyle.HardAndSoftEdges).ConvertToUnityMesh(true, "Sphere");
         MeshFilter meshFilter = GetComponent<MeshFilter>();
         meshFilter.mesh = mesh;
     }
 
-    //Convex Hull
+    //Create Convex Hull
     private ConvexHull<DefaultVertex, DefaultConvexFace<DefaultVertex>> GenerateConvexHull(List<double[]> points)
     {
         var convexhull = ConvexHull.Create(points).Result;

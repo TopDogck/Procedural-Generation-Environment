@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MIConvexHull;
 using Habrador_Computational_Geometry;
 using static Habrador_Computational_Geometry.Delaunay3DToVoronoiAlgorithm;
 
 public class ConvexVoronoiSphere : MonoBehaviour
 {
-    public int randomSeed = 42;
     //Tried out ranges 
     [Range(100, 2500)]
     public int numPoints = 500;
@@ -19,32 +17,15 @@ public class ConvexVoronoiSphere : MonoBehaviour
     public float jitter = 0f;
     private HalfEdgeData3 convexHull;
 
-    public VoronoiCenter centerType;
-    public bool removeInnerPoints = true;
+    public VoronoiCenter centreType;
     public bool removeUnwantedTriangle = true;
-    public bool removeMesh;
     private Vector3[] points;
     private HashSet<VoronoiCell3> voronoiCells;
 
     //Random seed and start generate sphere
     private void OnValidate()
     {
-        Random.InitState(randomSeed);
         GenerateSphere();
-    }
-
-    private void Update()
-    {
-        //needs to mesh the voronoiCells not the convex Hull maybe?
-
-        //if (removeMesh == true)
-        //{
-        //    Mesh mesh = convexHull.ConvertToMyMesh("Planet", MyMesh.MeshStyle.HardAndSoftEdges).ConvertToUnityMesh(true, "Planet");
-
-        //    //A warning ocurrs but still works? (convex hull)
-        //    MeshFilter meshFilter = GetComponent<MeshFilter>();
-        //    meshFilter.mesh = mesh;
-        //}
     }
 
     //new voronoi cells convex Hull sphere generator
@@ -58,13 +39,18 @@ public class ConvexVoronoiSphere : MonoBehaviour
         HashSet<MyVector3> normalizedPoints = normalizer.Normalize(pointsSet);
 
         // create a convex hull which is a 3D Delaunay Triangulation of the FP.
-        convexHull = IterativeHullAlgorithm3D.GenerateConvexHull(normalizedPoints, removeUnwantedTriangle, null, removeInnerPoints);
+        convexHull = IterativeHullAlgorithm3D.GenerateConvexHull(normalizedPoints, removeUnwantedTriangle, null);
 
         // Set and denormalize voronoi cells.
-        voronoiCells = Delaunay3DToVoronoiAlgorithm.GenerateVoronoiDiagram(convexHull, center: centerType);
+        voronoiCells = Delaunay3DToVoronoiAlgorithm.GenerateVoronoiDiagram(convexHull, center: centreType); // US vs UK
 
         voronoiCells = normalizer.UnNormalize(voronoiCells);
         convexHull = normalizer.UnNormalize(convexHull);
+
+        //It can use the MESH
+        //Mesh mesh = convexHull.ConvertToMyMesh("Planet", MyMesh.MeshStyle.HardAndSoftEdges).ConvertToUnityMesh(true, "Sphere");
+        //MeshFilter meshFilter = GetComponent<MeshFilter>();
+        //meshFilter.mesh = mesh;
     }
     private void OnDrawGizmos()
     {

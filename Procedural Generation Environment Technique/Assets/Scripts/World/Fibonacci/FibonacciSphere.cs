@@ -21,7 +21,7 @@ public class FibonacciSphere
         return points;
     }
 
-    //Generate Fibonacci Sphere Point for Convex Hull base
+    //Generate Fibonacci Sphere Point using HashSet for Convex Hull base
     public static HashSet<MyVector3> GeneratePointSet(int amount, float radius, float jitter = 0)
     {
         //Hash points
