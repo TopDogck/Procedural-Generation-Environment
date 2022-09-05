@@ -136,7 +136,7 @@ public class FlatCrust
 
         foreach (FlatPlate plate in plates)
         {
-            foreach (PlateEdge plateEdge in plate.edges)
+            foreach (OldPlateEdge plateEdge in plate.edges)
             {
                 // If this plate already has all its parents, move on.
                 if (plateEdge.parents[1] != null)
@@ -151,7 +151,7 @@ public class FlatCrust
     }
 
     //Edge of plates
-    private FlatPlate FindOtherEdgeParent(PlateEdge cEdge, FlatPlate pPlate, List<FlatPlate> plates)
+    private FlatPlate FindOtherEdgeParent(OldPlateEdge cEdge, FlatPlate pPlate, List<FlatPlate> plates)
     {
         foreach (FlatPlate plate in plates)
         {
@@ -160,7 +160,7 @@ public class FlatCrust
 
             FlatPlate neighborPlate = null;
 
-            foreach (PlateEdge plateEdge in plate.edges)
+            foreach (OldPlateEdge plateEdge in plate.edges)
             {
                 // Compare both ways.
                 bool forwardSameEdge = cEdge.start == plateEdge.start && cEdge.end == plateEdge.end;

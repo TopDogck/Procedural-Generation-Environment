@@ -7,7 +7,7 @@ using Habrador_Computational_Geometry;
 public class FlatPlate
 {
     public Vector3 center;
-    public List<PlateEdge> edges;
+    public List<OldPlateEdge> edges;
 
     //land or  ocean.
     public PlateType plateType;
@@ -26,25 +26,25 @@ public class FlatPlate
 
         this.center = center;
         this.plateType = plateType;
-        edges = new List<PlateEdge>();
+        edges = new List<OldPlateEdge>();
 
         //Set edges.
         foreach (VoronoiEdge3 voronoiEdge in voronoiEdges)
         {
-            PlateEdge plateEdge = new PlateEdge(voronoiEdge.p1.ToVector3(), voronoiEdge.p2.ToVector3(), this);
+            OldPlateEdge plateEdge = new OldPlateEdge(voronoiEdge.p1.ToVector3(), voronoiEdge.p2.ToVector3(), this);
             edges.Add(plateEdge);
         }
     }
 }
 
 //Plate edges
-public class PlateEdge
+public class OldPlateEdge
 {
     public Vector3 start;
     public Vector3 end;
     public FlatPlate[] parents = new FlatPlate[2];
 
-    public PlateEdge(Vector3 start, Vector3 end, FlatPlate parent)
+    public OldPlateEdge(Vector3 start, Vector3 end, FlatPlate parent)
     {
         this.start = start;
         this.end = end;

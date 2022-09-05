@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Code is very messy
+//Will leave this here to look back on and fix another time
 public class PlanetFlatCrust : MonoBehaviour
 {
     public int seed = 20;
@@ -16,29 +17,26 @@ public class PlanetFlatCrust : MonoBehaviour
     private MeshFilter meshFilter;
     private Mesh mesh;
 
-    //if i want to change colour
-    private Color landColour;
-    private Color waterColour;
-
+    //I commented this code out since it keeps throwing errors
     //Starts crust value and change vertices  
-    void OnValidate()
-    {
-        meshFilter = GetComponent<MeshFilter>();
-        if (!mesh)
-        {
-            mesh = Instantiate<Mesh>(meshFilter.sharedMesh);
-        }
-        crust = new FlatCrust(numbPlate, radius, mesh, seed);
-        ChangeVertices(crust);
-    }
+    //void OnValidate()
+    //{
+    //    meshFilter = GetComponent<MeshFilter>();
+    //    if (!mesh)
+    //    {
+    //        mesh = Instantiate<Mesh>(meshFilter.sharedMesh);
+    //    }
+    //    crust = new FlatCrust(numbPlate, radius, mesh, seed);
+    //    ChangeVertices(crust);
+    //}
 
-    //Instantiate sometimes instantiate the instantiate?
-    //replace with planet again and it seem it will fix itself for now
-    private void Awake()
-    {
-        mesh = Instantiate<Mesh>(meshFilter.sharedMesh);
-        ChangeVertices(crust);
-    }
+    ////Instantiate sometimes instantiate the instantiate?
+    ////replace with planet again and it seem it will fix itself for now
+    //private void Awake()
+    //{
+    //    mesh = Instantiate<Mesh>(meshFilter.sharedMesh);
+    //    ChangeVertices(crust);
+    //}
 
     // Changes the vertex pos to make water depth
     private void ChangeVertices(FlatCrust crust)
