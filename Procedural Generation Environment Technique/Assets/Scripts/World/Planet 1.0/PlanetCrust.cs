@@ -42,7 +42,7 @@ using UnityEngine;
         private List<TectonicPlate> GeneratePlates()
         {
             Random.InitState(randomSeed);
-            HashSet<Vector3> points = HelperMethods.MixedPointClustersOnSphere(numberOfPlates, radius);
+            HashSet<Vector3> points = OnUnitSphereMethods.MixedPointClustersOnSphere(numberOfPlates, radius);
             
             HashSet<VoronoiCell3> voronoiCells = GenerateVoronoiCells(points);
 

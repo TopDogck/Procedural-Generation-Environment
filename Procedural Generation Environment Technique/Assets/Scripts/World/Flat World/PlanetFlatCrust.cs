@@ -18,7 +18,8 @@ public class PlanetFlatCrust : MonoBehaviour
     private Mesh mesh;
 
     //I commented this code out since it keeps throwing errors
-    //Starts crust value and change vertices  
+    //Starts crust value and change vertices
+
     //void OnValidate()
     //{
     //    meshFilter = GetComponent<MeshFilter>();
@@ -30,8 +31,8 @@ public class PlanetFlatCrust : MonoBehaviour
     //    ChangeVertices(crust);
     //}
 
-    ////Instantiate sometimes instantiate the instantiate?
-    ////replace with planet again and it seem it will fix itself for now
+    //Instantiate sometimes instantiate the instantiate?
+    //replace with planet again and it seem it will fix itself for now
     //private void Awake()
     //{
     //    mesh = Instantiate<Mesh>(meshFilter.sharedMesh);

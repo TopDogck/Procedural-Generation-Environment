@@ -60,7 +60,7 @@
     <Compile Include="Assets\Scripts\World\Flat World\FlatPlate.cs" />
     <Compile Include="Assets\Scripts\Hash\SpaceTRS.cs" />
     <Compile Include="Assets\Scripts\Road\HouseHelper.cs" />
-    <Compile Include="Assets\Scripts\World\Planet 1.0\HelperMethods.cs" />
+    <Compile Include="Assets\Scripts\World\Planet 1.0\OnUnitSphereMethods.cs" />
     <Compile Include="Assets\Scripts\World\Planet 1.0\PlanetCrustGenerator.cs" />
     <Compile Include="Assets\Scripts\World\Voronoi\ConvexVoronoiSphere.cs" />
     <Compile Include="Assets\Scripts\World\Planet 1.0\TectonicPlateEdge.cs" />
@@ -74,7 +74,7 @@
     <Compile Include="Assets\Scripts\World\Convex Hull\ConvexHullVector3.cs" />
     <Compile Include="Assets\Scripts\Road\BasicVisualiser.cs" />
     <Compile Include="Assets\Scripts\Hash\HashVisualisation.cs" />
-    <Compile Include="Assets\Scripts\World\Planet 1.0\ExtensionMethods.cs" />
+    <Compile Include="Assets\Scripts\World\Planet 1.0\Vector3Methods.cs" />
     <Compile Include="Assets\Scripts\World\Convex Hull\ConvexHullBase.cs" />
     <Compile Include="Assets\Scripts\World\Flat World\PlanetFlatCrust.cs" />
     <Compile Include="Assets\Scripts\World\Fibonacci\BaseFibonacci.cs" />
