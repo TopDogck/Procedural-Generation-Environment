@@ -240,6 +240,71 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &35392717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 35392719}
+  - component: {fileID: 35392718}
+  m_Layer: 0
+  m_Name: Fake House Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &35392718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35392717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408f73ce1985bd34898366852f0e84a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseTypes:
+  - prefabs:
+    - {fileID: 703680335991234322, guid: f65bc08d203a9254d912168221b8fda9, type: 3}
+    sizeReq: 3
+    amount: 1
+    amountPlaced: 0
+  - prefabs:
+    - {fileID: 703680335991234322, guid: 5750f1177ed7ed442b8ebdb9fe5580f1, type: 3}
+    sizeReq: 2
+    amount: 10
+    amountPlaced: 0
+  - prefabs:
+    - {fileID: 703680335991234322, guid: dc03338ee98e5e549ad4a8955a30c0e3, type: 3}
+    sizeReq: 1
+    amount: 20
+    amountPlaced: 0
+  - prefabs:
+    - {fileID: 703680335991234322, guid: 40739ab708d696741aaa6ff25c613648, type: 3}
+    - {fileID: 703680335991234322, guid: 7bd423611b6a5e14c87c4788c1a0b586, type: 3}
+    sizeReq: 1
+    amount: 200
+    amountPlaced: 0
+--- !u!4 &35392719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35392717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &940040676
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,10 +399,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rules:
   - {fileID: 11400000, guid: 11a5bf3202e877440a3b88b83e1dfff7, type: 2}
-  axiom: '[F]--F'
+  axiom: '[F]--[F]--[F]--[F]--F'
   limt: 3
   randomRuleIgnore: 1
-  changeIgnoreRule: 0.3
+  changeIgnoreRule: 0.5
 --- !u!1 &1141249242
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +626,7 @@ MonoBehaviour:
   roadTri: {fileID: 3598022743198626205, guid: b1c2bef9477c0ee4eb44e949143f46ff, type: 3}
   roadCross: {fileID: 7370715298169567163, guid: 0b27a6c3524b5d8499b6ecaf0c19f727, type: 3}
   roadEnd: {fileID: 7037100357158876339, guid: 302b74156d7aa584cbe4350d5437dd59, type: 3}
-  roadHouse: {fileID: 703680335991234322, guid: 40739ab708d696741aaa6ff25c613648, type: 3}
+  roadHouse: {fileID: 6024523638450781169, guid: d46ccd13f79e5c24585adecacf5b3910, type: 3}
 --- !u!4 &1590900472
 Transform:
   m_ObjectHideFlags: 0
@@ -653,23 +718,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   houseTypes:
   - prefabs:
-    - {fileID: 703680335991234322, guid: f65bc08d203a9254d912168221b8fda9, type: 3}
+    - {fileID: 2726993474556538517, guid: 18648a19542372c4692a8fd2177750b6, type: 3}
     sizeReq: 3
     amount: 1
     amountPlaced: 0
   - prefabs:
-    - {fileID: 703680335991234322, guid: 5750f1177ed7ed442b8ebdb9fe5580f1, type: 3}
+    - {fileID: 8118847395801038509, guid: 329b11392a7e1e740a3a9e4626f9b6d1, type: 3}
+    - {fileID: 8118847395801038509, guid: 2b8ce947e71023c42afdca4585592ac7, type: 3}
+    - {fileID: 8118847395801038509, guid: 25cc5d7e13fc6f045805db4a14f1837e, type: 3}
+    - {fileID: 6676696555664060655, guid: 0833be2bfec39c14983c7cb1fe44d50a, type: 3}
+    - {fileID: 6676696555664060655, guid: ff94ae2f3282bd8499e53be87e8f6f82, type: 3}
+    - {fileID: 6676696555664060655, guid: cae03fcb1b3449d4cb1d76f70ebd03e8, type: 3}
     sizeReq: 2
-    amount: 5
+    amount: 8
     amountPlaced: 0
   - prefabs:
-    - {fileID: 703680335991234322, guid: dc03338ee98e5e549ad4a8955a30c0e3, type: 3}
+    - {fileID: 3765658278619914455, guid: a8704433a355bf049a9906d2fe7e0683, type: 3}
+    - {fileID: 3765658278619914455, guid: e96f8f46366c249499f6e0d5951a54b2, type: 3}
+    - {fileID: 3765658278619914455, guid: c26ceae1148c53d4f9cf1a754352611e, type: 3}
+    - {fileID: 1637159539230896073, guid: 92e51f90980e1f44988eb1ecd67034c5, type: 3}
+    - {fileID: 1637159539230896073, guid: 04e5f209504078c4fa5743905aad33ca, type: 3}
+    - {fileID: 1637159539230896073, guid: 4599f5e273f1f7a4fa33796d55a0ef75, type: 3}
+    sizeReq: 2
+    amount: 10
+    amountPlaced: 0
+  - prefabs:
+    - {fileID: 6024523638450781169, guid: 3cbd3a74436bf1d43a43328570aad979, type: 3}
+    - {fileID: 6024523638450781169, guid: d46ccd13f79e5c24585adecacf5b3910, type: 3}
+    - {fileID: 6024523638450781169, guid: c727898821feb0e4ba2ff1ca07f220a4, type: 3}
+    - {fileID: 2535836230853070681, guid: d974457e5d054504c9cac0eba9811a77, type: 3}
+    - {fileID: 2535836230853070681, guid: 94b74aef779228a499d4078b183867cd, type: 3}
+    - {fileID: 2535836230853070681, guid: e3a1078a34fa3724199bafa44a9cc689, type: 3}
     sizeReq: 1
     amount: 20
     amountPlaced: 0
   - prefabs:
-    - {fileID: 703680335991234322, guid: 40739ab708d696741aaa6ff25c613648, type: 3}
-    - {fileID: 703680335991234322, guid: 7bd423611b6a5e14c87c4788c1a0b586, type: 3}
+    - {fileID: 881336062486326423, guid: ba36bc77823a62442ada1990e7545b8f, type: 3}
+    sizeReq: 3
+    amount: 1
+    amountPlaced: 0
+  - prefabs:
+    - {fileID: 4956908213473714416, guid: d84a898f78220d348afbd8ed2c17e861, type: 3}
+    - {fileID: 4956908213473714416, guid: 9ab42c8c20b1b0f4899b45f1a4b9f421, type: 3}
+    - {fileID: 4956908213473714416, guid: 37379c3bccfd27c488a1224adf823c42, type: 3}
+    - {fileID: 6931406477572441477, guid: c46dce4c3deee0a4bb0fb3b2b3c9b4fd, type: 3}
+    - {fileID: 6931406477572441477, guid: 4f7eb032d68af314da945789d58a1baa, type: 3}
+    - {fileID: 6931406477572441477, guid: cf21c9bac318a7b42abc364e5f8adf24, type: 3}
     sizeReq: 1
     amount: 200
     amountPlaced: 0

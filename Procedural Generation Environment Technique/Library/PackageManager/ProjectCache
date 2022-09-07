@@ -6,7 +6,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637976599136595242
+      ticks: 637979939058156658
     m_Hash: 2354651437
   m_LockFileStatus:
     m_FilePath: D:/Work/Uni/Masters/CTD/Procedural-Generation-Environment/Procedural
@@ -15,7 +15,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637976599136595242
+      ticks: 637979939058156658
     m_Hash: 346782358
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -3815,6 +3815,7 @@ m_PackageAssets:
         - 1.4.0
         - 1.4.1
         - 1.4.2
+        - 1.4.3
         compatible:
         - 1.0.1
         - 1.1.0-pre.7
@@ -3830,6 +3831,7 @@ m_PackageAssets:
         - 1.4.0
         - 1.4.1
         - 1.4.2
+        - 1.4.3
         verified: 1.0.1
       dependencies:
       - name: com.unity.modules.unitywebrequest
