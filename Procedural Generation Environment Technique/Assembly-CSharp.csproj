@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\Road\RoadDirections.cs" />
     <Compile Include="Assets\Scripts\World\Flat World\FlatCrust.cs" />
     <Compile Include="Assets\Scripts\World\Planet 1.0\TectonicPlate.cs" />
+    <Compile Include="Assets\Scripts\Road\HouseType.cs" />
     <Compile Include="Assets\Scripts\Road\LsystemGeneration.cs" />
     <Compile Include="Assets\Scripts\Road\NewVisualiser.cs" />
     <Compile Include="Assets\Scripts\Road\Roads.cs" />
