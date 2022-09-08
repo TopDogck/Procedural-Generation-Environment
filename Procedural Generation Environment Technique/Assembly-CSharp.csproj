@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Road\AgentParameters.cs" />
     <Compile Include="Assets\Scripts\World\Fibonacci\FibonacciSphere.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\Road\RoadPlacement.cs" />
     <Compile Include="Assets\Scripts\Mesh\MeshGeneration.cs" />
     <Compile Include="Assets\Scripts\Mesh\TerrainGenerator.cs" />
@@ -95,6 +96,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\HashGPU.hlsl" />
+=======
+    <Compile Include="Assets\Scripts\MeshGeneration.cs" />
+    <Compile Include="Assets\Scripts\TerrainGenerator.cs" />
+    <Compile Include="Assets\URP\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\World.cs" />
+    <Compile Include="Assets\Scripts\Cell.cs" />
+    <Compile Include="Assets\Scripts\Grid.cs" />
+>>>>>>> Islands
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
