@@ -5,16 +5,18 @@ using UnityEngine;
     public class PlanetCrust
     {
         public int numberOfPlates;
-        public float radius;
+        public float radiusSize;
         public int randomSeed;
+        public float amplitude = 1f;
 
         public List<TectonicPlate> plates;
 
-        public PlanetCrust(int numberOfPlates, float radius, Mesh sampleMesh, int randomSeed = 42)
+        public PlanetCrust(int numberOfPlates, float radius, Mesh sampleMesh, int randomSeed = 42, float amplitude = 1)
         {
             this.numberOfPlates = numberOfPlates;
-            this.radius = radius;
+            this.radiusSize = radius;
             this.randomSeed = randomSeed;
+            this.amplitude = amplitude;
             plates = GeneratePlates();
             SampleMesh(sampleMesh);
         }
@@ -42,7 +44,7 @@ using UnityEngine;
         private List<TectonicPlate> GeneratePlates()
         {
             Random.InitState(randomSeed);
-            HashSet<Vector3> points = OnUnitSphereMethods.MixedPointClustersOnSphere(numberOfPlates, radius);
+            HashSet<Vector3> points = OnUnitSphereMethods.MixedPointClustersOnSphere(numberOfPlates, radiusSize);
             
             HashSet<VoronoiCell3> voronoiCells = GenerateVoronoiCells(points);
 

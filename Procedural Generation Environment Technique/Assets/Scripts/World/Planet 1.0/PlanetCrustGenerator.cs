@@ -9,6 +9,7 @@ using UnityEngine;
         public float radius = 8; //Ridged
         public float amplitude = 1f; //Height,Depth
         public PlanetCrust crust;
+        public PlanetUI planetUI;
         public bool randomColour = true;
         public HashSet<Vector3> points;
         public List<TectonicPlate> plates;
@@ -30,30 +31,55 @@ using UnityEngine;
                 originalMesh = Instantiate<Mesh>(meshFilter.sharedMesh);
             }
 
-            crust = new PlanetCrust(plateAmount, radius, originalMesh, randomSeed: seed);
+            //crust = new PlanetCrust(plateAmount, radius, originalMesh, randomSeed: seed);
 
-            if (Application.isPlaying)
+            //if (Application.isPlaying)
+            //{
+            //    Random.InitState(seed); //If removed it will keep randomising
+            //    if (randomColour == true)
+            //    {
+            //        //Random colour
+            //        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+            //        meshRenderer.material.color = Random.ColorHSV(0, 1, 0.75f, 1f);
+            //        MeshRenderer childMeshRenderer = GetComponentsInChildren<MeshRenderer>()[1];
+            //        childMeshRenderer.material.color = Random.ColorHSV(0, 1, 0.75f, 1f);
+            //        Debug.Log(childMeshRenderer.material.name);
+            //    }
+            //    else
+            //    {
+            //        //else Earth colours
+            //        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+            //        meshRenderer.material.color = Color.green;
+            //        MeshRenderer childMeshRenderer = GetComponentsInChildren<MeshRenderer>()[1];
+            //        childMeshRenderer.material.color = Color.blue;
+            //    }
+            //    ChangeVertices(crust);
+            //}
+        }
+
+        public void UpdatePlanet(int seedUI, int plateUI, float radiusUI, float amplitudeUI, bool randomColour)
+        {
+            Random.InitState(seedUI); //If removed it will keep randomising
+            if (randomColour == true)
             {
-                Random.InitState(seed); //If removed it will keep randomising
-                if (randomColour == true)
-                {
-                    //Random colour
-                    MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-                    meshRenderer.material.color = Random.ColorHSV(0, 1, 0.75f, 1f);
-                    MeshRenderer childMeshRenderer = GetComponentsInChildren<MeshRenderer>()[1];
-                    childMeshRenderer.material.color = Random.ColorHSV(0, 1, 0.75f, 1f);
-                    Debug.Log(childMeshRenderer.material.name);
-                }
-                else
-                {
-                    //else Earth colours
-                    MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-                    meshRenderer.material.color = Color.green;
-                    MeshRenderer childMeshRenderer = GetComponentsInChildren<MeshRenderer>()[1];
-                    childMeshRenderer.material.color = Color.blue;
-                }
-                ChangeVertices(crust);
+                //Random colour
+                MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+                meshRenderer.material.color = Random.ColorHSV(0, 1, 0.75f, 1f);
+                MeshRenderer childMeshRenderer = GetComponentsInChildren<MeshRenderer>()[1];
+                childMeshRenderer.material.color = Random.ColorHSV(0, 1, 0.75f, 1f);
+                //Debug.Log(childMeshRenderer.material.name);
             }
+            else
+            {
+                //else Earth colours
+                MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+                meshRenderer.material.color = Color.green;
+                MeshRenderer childMeshRenderer = GetComponentsInChildren<MeshRenderer>()[1];
+                childMeshRenderer.material.color = Color.blue;
+            }
+            seed = seedUI;
+            crust = new PlanetCrust(plateUI, radiusUI, originalMesh, randomSeed: seedUI, amplitudeUI);
+            ChangeVertices(crust);
         }
 
         private void Awake()
@@ -82,8 +108,8 @@ using UnityEngine;
                     } else
                     {
                     //Perlin Noise
-                        float height = Perlin.Noise(vertex.normalized * radius);
-                        float roughness = amplitude * 0.1f;
+                        float height = Perlin.Noise(vertex.normalized * planetUI.radiusSize); //radius // planetUI.radiusSize
+                    float roughness = planetUI.amplitude * 0.1f;
                         newVertices[vertexID] = vertex + (vertex.normalized * height * roughness);
                     }
                 }
