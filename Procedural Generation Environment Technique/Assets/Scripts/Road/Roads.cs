@@ -120,4 +120,14 @@ public class Roads : MonoBehaviour
             }
         }
     }
+
+    public void Reset()
+    {
+        foreach (var road in roadDic.Values)
+        {
+            Destroy(road);
+        }
+        roadDic.Clear();
+        fixRoads = new HashSet<Vector3Int>();
+    }
 }

@@ -35,6 +35,20 @@ public class TerrainGenerator : MonoBehaviour
         
     }
 
+    public void UpdateIsland(int x, int z, float frequency, float amplitude, float octave, float l1frequency, float l1amplitude, float l2frequency, float l2amplitude)
+    {
+        xSize = x;
+        zSize = z;
+        MountainFrequencies = frequency;
+        MountainAmplitude = amplitude;
+
+        octaveLayers = octave;
+        layer1Frequencies = l1frequency;
+        layer1Amplitude = l1amplitude;
+        layer2Frequencies = l2frequency;
+        layer2Amplitude = l2amplitude;
+}
+
     void CreateShape()
     {
         vertices = new Vector3[(xSize + 1) * (zSize + 1)];

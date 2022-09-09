@@ -127,4 +127,17 @@ public class HouseHelper : MonoBehaviour
         }
         return freeSpaces;
     }
+
+    public void Reset()
+    {
+        foreach (var house in houseDic.Values)
+        {
+            Destroy(house);
+        }
+        houseDic.Clear();
+        foreach (var types in houseTypes)
+        {
+            types.Reset();
+        }
+    }
 }

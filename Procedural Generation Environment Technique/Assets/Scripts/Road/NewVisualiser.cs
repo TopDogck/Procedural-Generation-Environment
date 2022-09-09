@@ -6,10 +6,10 @@ using static BasicVisualiser;
 public class NewVisualiser : MonoBehaviour
 {
     public LsystemGeneration lsystem;
-    List<Vector3> positions = new List<Vector3>();
     //public GameObject prefab; //for testing
     public Material lineMaterial; // for testing
     public int customLength = 2;
+    public int roadLength = 8;
     public Roads roads;
     public bool drawLine = false;
 
@@ -38,6 +38,17 @@ public class NewVisualiser : MonoBehaviour
     {
         var sequence = lsystem.GenerateAxiom();
         VisualiseSequence(sequence);
+        CreateNewTown();
+    }
+
+    public void CreateNewTown()
+    {
+        length = roadLength;
+        roads.Reset();
+        houseHelper.Reset();
+
+        var sequence = lsystem.GenerateAxiom();
+        VisualiseSequence(sequence);
     }
 
     private void VisualiseSequence(string sequence)
@@ -48,7 +59,7 @@ public class NewVisualiser : MonoBehaviour
         Vector3 direction = Vector3.forward;
         Vector3 tempPostion = Vector3.zero;
 
-        positions.Add(currentPosition);
+        //positions.Add(currentPosition);
 
         foreach (var word in sequence)
         {
@@ -81,7 +92,6 @@ public class NewVisualiser : MonoBehaviour
                     currentPosition += direction * Length;
                     roads.PlaceStreetPos(tempPostion, Vector3Int.RoundToInt(direction), length);
                     Length -= customLength;
-                    positions.Add(currentPosition);
                     if (drawLine == true)
                     {
                         DrawLine(tempPostion, currentPosition, Color.white); //for testing
