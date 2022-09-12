@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Roads.unity
     guid: 57e65b6f1ed3f49448fb808935eb018a
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: dc1e87be6606e844ba14e3b4a41f0a06
   m_configObjects: {}

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static BasicVisualiser;
+using UnityEngine.UI;
+using System.Text.RegularExpressions;
 
 public class NewVisualiser : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class NewVisualiser : MonoBehaviour
     public Roads roads;
     public bool drawLine = false;
 
+    public InputField axiomInput;
     public HouseHelper houseHelper;
 
     private int length = 8;
@@ -43,6 +46,7 @@ public class NewVisualiser : MonoBehaviour
 
     public void CreateNewTown()
     {
+        axiomInput.text = Regex.Replace(axiomInput.text, @"[^F[]]-+", "");
         length = roadLength;
         roads.Reset();
         houseHelper.Reset();

@@ -20,6 +20,13 @@ public class LsystemGeneration : MonoBehaviour
         Debug.Log(GenerateAxiom());   
     }
 
+    public void UpdateTown(int amount, string a, bool ignoreRule)
+    {
+        limt = amount;
+        axiom = a;
+        randomRuleIgnore = ignoreRule;
+    }
+
     public string GenerateAxiom(string word = null)
     {
         if (word == null)
