@@ -30,31 +30,6 @@ using UnityEngine;
             {
                 originalMesh = Instantiate<Mesh>(meshFilter.sharedMesh);
             }
-
-            //crust = new PlanetCrust(plateAmount, radius, originalMesh, randomSeed: seed);
-
-            //if (Application.isPlaying)
-            //{
-            //    Random.InitState(seed); //If removed it will keep randomising
-            //    if (randomColour == true)
-            //    {
-            //        //Random colour
-            //        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-            //        meshRenderer.material.color = Random.ColorHSV(0, 1, 0.75f, 1f);
-            //        MeshRenderer childMeshRenderer = GetComponentsInChildren<MeshRenderer>()[1];
-            //        childMeshRenderer.material.color = Random.ColorHSV(0, 1, 0.75f, 1f);
-            //        Debug.Log(childMeshRenderer.material.name);
-            //    }
-            //    else
-            //    {
-            //        //else Earth colours
-            //        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-            //        meshRenderer.material.color = Color.green;
-            //        MeshRenderer childMeshRenderer = GetComponentsInChildren<MeshRenderer>()[1];
-            //        childMeshRenderer.material.color = Color.blue;
-            //    }
-            //    ChangeVertices(crust);
-            //}
         }
 
         public void UpdatePlanet(int seedUI, int plateUI, float radiusUI, float amplitudeUI, bool randomColour)
